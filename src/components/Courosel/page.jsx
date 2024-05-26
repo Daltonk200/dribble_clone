@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -64,8 +65,10 @@ export default function Explore() {
             <div className=" p-4 rounded-lg shadow-lg overflow-hidden group">
               <div className="relative overflow-hidden h-48 rounded-t-lg">
                 <Link href={`/`}>
-                  <img
+                  <Image
                     src={design.imageUrl}
+                    width={100}
+                    height={100}
                     alt={design.host}
                     className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
                   />
